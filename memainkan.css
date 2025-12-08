@@ -1,0 +1,157 @@
+:root {
+  --primary: #ffd667;
+  --bg: #721818;
+  --bg2: #aa0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Baloo Chettan 2", sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+
+/* ornamen hiasan */
+
+.ornamen-kanan-atas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* hiasan gangsa kanan kiri */
+
+.hiasan-gangsa {
+  display: flex;
+  align-items: center;
+}
+
+.hiasan-gangsa .gangsa1 {
+  position: absolute;
+  left: 0;
+  top: 22rem;
+  transform: scaleX(-1);
+}
+
+.hiasan-gangsa .gangsa2 {
+  position: absolute;
+  right: 0;
+  top: 22rem;
+}
+
+/* bulat hiasan */
+
+.bulat-atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bulat-bawah {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* navigasi start*/
+
+.back {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem 0 4%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+.back h1 {
+  font-weight: 800;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.back img:hover {
+  transform: scale(1.1);
+}
+
+/* hiro start */
+
+.hiro {
+  display: flex;
+  justify-content: center;
+}
+
+.hiro img {
+  height: 25rem;
+  margin: -10% 3% 3rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.hiro img:hover {
+  transform: scale(1.05);
+}
+
+.hiro1 {
+  display: flex;
+  justify-content: center;
+  margin-left: 6rem;
+}
+
+.hiro1 img {
+  height: 20rem;
+  margin: -3% 3% 3rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.hiro1 img:hover {
+  transform: scale(1.05);
+}
+
+.hiro1 .play-btn1 {
+  height: 15rem;
+  margin: 1.2rem -3.5rem;
+}
+
+/* hiro end */
+
+/* opsi audio start */
+
+.opsiaudio {
+  display: flex;
+  justify-content: center;
+  margin-top: -2rem;
+}
+
+.opsiaudio img {
+  width: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.opsiaudio img:hover {
+  transform: scale(1.05);
+}
+/* opsi audio end */

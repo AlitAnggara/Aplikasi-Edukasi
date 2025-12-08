@@ -1,0 +1,146 @@
+:root {
+  --primary: #ffd667;
+  --bg: #721818;
+  --bg2: #aa0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Baloo Chettan 2", sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.page-transition.fade-out {
+  opacity: 0;
+}
+/* Navbar */
+
+#rotate-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(169, 169, 169, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem 0 4%;
+}
+.navbar-nav {
+  padding: 0rem 4%;
+}
+
+.navbar img {
+  width: 10rem;
+  display: inline-block;
+}
+
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  display: inline-block;
+  margin-right: 17rem;
+}
+.navbar-start {
+  display: flex;
+}
+
+.navbar-nav img {
+  width: 5rem;
+  margin: 0rem 1rem;
+}
+
+.navbar-nav a {
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  box-shadow: 4px 4px 10px black;
+  background-color: var(--primary);
+  border-radius: 6rem;
+  height: 6.5rem;
+  width: 37rem;
+  margin: 1rem 8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar-nav a:hover {
+  transform: scale(1.05);
+}
+
+.navbar-gangsa img {
+  justify-content: space-between;
+  display: inline-block;
+  margin-left: -35%;
+}
+
+.navbar-gangsa .info {
+  position: absolute;
+  margin: 24% 0 0 -8%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar-gangsa .info:hover {
+  transform: scale(1.2);
+}
+/* Ornamen Hiasan */
+.ornamen-kanan-atas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ornamen-kiri-bawah {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Bulat Hiasan */
+.bulat-atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bulat-bawah {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

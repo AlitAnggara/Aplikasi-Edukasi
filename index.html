@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamelan Baleganjur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Chettan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="page-transition">
+    <div id="rotate-warning">
+      <img
+        src="images/PutarHp-removebg-preview.png"
+        alt=""
+        style="width: 10rem"
+      />
+    </div>
+    <!-- Ornamen Samping -->
+    <div class="ornamen-kanan-atas">
+      <img src="images/UkiranNew3.png" alt="" width="400rem" />
+    </div>
+    <div class="ornamen-kiri-bawah">
+      <img src="images/UkiranNew.png" alt="" width="400rem" />
+    </div>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <img src="images/logo-TK-Indonesia.png" alt="logotk" />
+      <h1 class="navbar-logo">BELAJAR GAMELAN BALEGANJUR</h1>
+    </nav>
+    <div class="navbar-start">
+      <div class="navbar-nav">
+        <a onclick="goToPage('opsi1.html')"
+          ><img src="images/Buku.png" alt="kenal" />KENAL GAMELAN</a
+        >
+        <a onclick="goToPage(`main.html`)"
+          ><img src="images/Nadaa.png" alt="main" />MAIN GAMELAN</a
+        >
+        <a onclick="goToPage(`pilihanKuis.html`)"
+          ><img src="images/Kuis.png" alt="kuis" />KUIS SERU</a
+        >'
+      </div>
+      <div class="navbar-gangsa">
+        <img src="images/Bacground.png" alt="background" width="310rem" />
+        <a onclick="goToPage(`tentang.html`)"
+          ><img src="images/Info.png" alt="info" class="info" width="150rem"
+        /></a>
+      </div>
+    </div>
+
+    <audio
+      id="soundClick"
+      src="audio/SoundEffectNew1.mp3"
+      preload="auto"
+    ></audio>
+
+    <script>
+      function goToPage(page) {
+        const audio = document.getElementById("soundClick");
+
+        // Pastikan suara bisa diputar
+        audio.currentTime = 0;
+        audio
+          .play()
+          .then(() => {
+            // Mulai transisi fade out
+            document.body.classList.add("fade-out");
+
+            // Tunggu transisi 0.5 detik
+            setTimeout(() => {
+              window.location.href = page;
+            }, 450);
+          })
+          .catch(() => {
+            // Kalau audio diblokir browser, langsung pindah
+            window.location.href = page;
+          });
+      }
+    </script>
+    <script>
+      function checkOrientation() {
+        if (window.innerHeight > window.innerWidth) {
+          document.getElementById("rotate-warning").style.display = "flex";
+        } else {
+          document.getElementById("rotate-warning").style.display = "none";
+        }
+      }
+
+      window.addEventListener("resize", checkOrientation);
+      window.addEventListener("load", checkOrientation);
+    </script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("backsound.js").then(() => {
+          navigator.serviceWorker.ready.then((worker) => {
+            document.body.addEventListener(
+              "click",
+              () => {
+                worker.active.postMessage("play");
+              },
+              { once: true }
+            );
+          });
+        });
+      }
+    </script>
+
+    <!-- Ornamen bulat -->
+    <div class="bulat-atas">
+      <img src="images/bulat atas.png" alt="" width="400rem" />
+    </div>
+    <div class="bulat-bawah">
+      <img src="images/bulat bawah.png" alt="" width="400rem" />
+    </div>
+  </body>
+</html>

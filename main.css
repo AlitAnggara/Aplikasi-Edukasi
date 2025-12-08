@@ -1,0 +1,160 @@
+:root {
+  --primary: #ffd667;
+  --bg: #721818;
+  --bg2: #aa0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Baloo Chettan 2", sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+
+/* ornamen hiasan */
+
+.ornamen-kanan-atas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* hiasan gangsa kanan kiri */
+
+.hiasan-gangsa {
+  display: flex;
+  align-items: center;
+}
+
+.hiasan-gangsa .gangsa1 {
+  position: absolute;
+  left: 0;
+  top: 22rem;
+  transform: scaleX(-1);
+}
+
+.hiasan-gangsa .gangsa2 {
+  position: absolute;
+  right: 0;
+  top: 22rem;
+}
+
+/* bulat hiasan */
+
+.bulat-atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bulat-bawah {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* navigasi start*/
+
+.back {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 5rem 0 4%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back img:hover {
+  transform: scale(1.1);
+}
+
+.judul h1 {
+  display: flex;
+  font-size: 3.5rem;
+  margin: -9.5rem 0 3rem 15rem;
+}
+.judul h2 {
+  display: flex;
+  font-size: 3.5rem;
+  margin: -5rem 0 1rem 15rem;
+}
+
+/* navigasi end */
+
+/* navbar start */
+
+.opsi {
+  display: flex;
+}
+
+.opsipertama a {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 800;
+  font-size: 2rem;
+  background-color: var(--primary);
+  border-radius: 5rem;
+  box-shadow: 4px 4px 10px black;
+  width: 25rem;
+  height: 7.5rem;
+  padding: 1rem;
+  margin: 0 15rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.opsipertama a:hover {
+  transform: scale(1.05);
+}
+
+.opsipertama a img {
+  width: 8rem;
+}
+
+.opsikedua {
+  margin-top: -4.5rem;
+}
+
+.opsikedua a {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 800;
+  font-size: 2rem;
+  background-color: var(--primary);
+  border-radius: 5rem;
+  box-shadow: 4px 4px 10px black;
+  width: 25rem;
+  height: 7.5rem;
+  padding: 1rem;
+  margin: 0 -14rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.opsikedua a:hover {
+  transform: scale(1.05);
+}
+
+.opsikedua a img {
+  width: 8rem;
+}
+/* navbar end */

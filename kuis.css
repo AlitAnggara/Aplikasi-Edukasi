@@ -1,0 +1,464 @@
+:root {
+  --primary: #ffd667;
+  --bg: #721818;
+  --bg2: #aa0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Baloo Chettan 2", sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+
+/* ornamen hiasan */
+
+.ornamen-kanan-atas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* hiasan gangsa kanan kiri */
+
+.hiasan-gangsa {
+  display: flex;
+  align-items: center;
+}
+
+.hiasan-gangsa .gangsa1 {
+  position: absolute;
+  left: 0;
+  top: 22rem;
+  transform: scaleX(-1);
+}
+
+.hiasan-gangsa .gangsa2 {
+  position: absolute;
+  right: 0;
+  top: 22rem;
+}
+
+/* bulat hiasan */
+
+.bulat-atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bulat-bawah {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* navigasi start*/
+
+.back {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem 0 4%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+.back h1 {
+  font-weight: 800;
+  margin-left: 15rem;
+  margin-bottom: 1rem;
+}
+
+.back img:hover {
+  transform: scale(1.1);
+}
+
+/* Judul start */
+
+.Judul h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 4.8rem;
+  margin-bottom: 2.5rem;
+  margin-top: -10rem;
+}
+
+/* cover kuis */
+
+.cover-kuis h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  width: 50rem;
+  height: 20rem;
+  margin: auto;
+  margin-top: -2.5rem;
+  border-radius: 10rem;
+  color: var(--primary);
+  box-shadow: 4px 4px 10px black;
+}
+
+.cover-tentang h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  width: 50rem;
+  height: 28rem;
+  margin: auto;
+  margin-top: -2.5rem;
+  border-radius: 5rem;
+  color: var(--primary);
+  box-shadow: 4px 4px 10px black;
+}
+
+.cover-tentang h1 img {
+  height: 20rem;
+  border-radius: 2rem;
+  box-shadow: 4px 4px 1px black;
+  margin-left: 26rem;
+}
+
+.tentangKami {
+  display: block;
+  margin-left: 18rem;
+  margin-top: -23rem;
+  color: black;
+}
+
+.tentangKami .Nama {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.tentangKami .Nama1 {
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  font-weight: 600;
+}
+
+.tentangKami .Nama2 {
+  margin-top: -0.1rem;
+  font-weight: 500;
+}
+
+.tentangLanjut {
+  margin-top: 0.1rem;
+}
+
+.tentangLanjut span {
+  font-size: 2rem;
+  color: black;
+}
+
+.tentangLanjut img {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.cover-skor h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  width: 50rem;
+  height: 15rem;
+  margin: auto;
+  margin-top: -2.5rem;
+  border-radius: 5rem;
+  color: var(--primary);
+  box-shadow: 4px 4px 10px black;
+}
+
+/* kuis start */
+
+.gambar-kuis {
+  display: flex;
+  justify-content: center;
+  margin-top: -17.5rem;
+}
+
+.gambar-kuis img {
+  width: 15rem;
+}
+
+/* jawaban kuis */
+
+.opsi-jawaban1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 800;
+  margin-top: -1rem;
+}
+
+.opsi-jawaban1 img {
+  width: 8rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.opsi-jawaban1 img:hover {
+  transform: scale(1.05);
+}
+
+.opsi-jawaban2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.opsi-jawaban2 img {
+  width: 8rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.opsi-jawaban2 img:hover {
+  transform: scale(1.05);
+}
+
+.opsi-jawaban1 .opsi-1 {
+  display: flex;
+  margin-right: 6rem;
+}
+.opsi-jawaban1 .opsi-2 {
+  display: flex;
+  margin-left: 6rem;
+}
+.opsi-jawaban2 .opsi-3 {
+  display: flex;
+  margin-right: 6rem;
+}
+.opsi-jawaban2 .opsi-4 {
+  display: flex;
+  margin-left: 6rem;
+}
+
+.cover-kuis img {
+  height: 30rem;
+  margin-left: 25rem;
+}
+
+/* CSS Kuis */
+
+#question-image {
+  display: flex;
+  margin-top: -18rem;
+  height: 15rem;
+  margin-left: 20rem;
+}
+
+#quiz3 {
+  display: flex;
+  margin-top: -18rem;
+  height: 15rem;
+  margin-left: 20rem;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.option {
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.option img {
+  display: flex;
+  height: 10rem;
+  background: none;
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+#popup {
+  display: flex;
+  position: fixed;
+  top: 44%;
+  margin-left: 40rem;
+  transform: translate(-50%, -50%);
+  color: black;
+  border-radius: 20rem;
+  font-size: 200px;
+  text-align: center;
+  z-index: 999;
+  background: var(--primary);
+  font-weight: 900;
+}
+
+h2 {
+  display: flex;
+  margin-top: -16rem;
+  margin-left: 35rem;
+  font-size: 7rem;
+  color: black;
+  font-weight: 800;
+}
+
+.ulangKembali img {
+  height: 15rem;
+  margin-left: 17rem;
+  margin-top: -12rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ulangKembali img:hover {
+  transform: scale(1.3);
+}
+
+.ulangKembali p {
+  font-size: 4.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+/* CSS Pilihan Kuis */
+
+.pilihanKuis {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-right: 3.1rem;
+}
+
+.pilihanKuis a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  height: 17rem;
+  width: 17rem;
+  margin-left: 3rem;
+  border-radius: 100%;
+  box-shadow: 4px 4px 10px black;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pilihanKuis a:hover {
+  transform: scale(1.1);
+}
+
+.pilihanKuis img {
+  width: 13rem;
+  text-align: center;
+}
+
+/* pop up dari kuis 2 */
+
+#confirm-box {
+  display: none;
+  position: fixed;
+  top: 43.9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+  z-index: 999;
+  height: 20rem;
+  width: 50rem;
+  border-radius: 10rem;
+  animation: fadeIn 0.3s ease-in;
+}
+
+#confirm-image {
+  width: 13rem;
+  margin-top: -2rem;
+  margin-bottom: -0.7rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn.yes {
+  background: green;
+  font-size: 4rem;
+  height: 7rem;
+  width: 15rem;
+}
+.btn.no {
+  background: red;
+  font-size: 4rem;
+  height: 7rem;
+  width: 15rem;
+}
+
+.btn.yes .btn.no:hover {
+  transform: scale(1.5);
+}
+
+.restart-btn img {
+  width: 80px;
+  border-radius: 50%;
+  background: #fff5cc;
+  padding: 10px;
+  border: 3px solid #f5d57d;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.restart-btn img:hover {
+  transform: scale(1.1) rotate(10deg);
+}

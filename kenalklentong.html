@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenal Gamelan Baleganjur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Chettan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="mengenal.css" />
+  </head>
+  <body>
+    <!-- ornamen kana atas -->
+    <div class="ornamen-kanan-atas">
+      <img src="images/UkiranNew3.png" alt="" width="400rem" />
+    </div>
+
+    <!-- tombol keluar -->
+    <div class="back">
+      <a onclick="playClick(`opsi1.html`)"
+        ><img src="images/Back.png" alt="" width="150rem"
+      /></a>
+      <h1>KLENTONG</h1>
+    </div>
+
+    <!-- hiasan gangsa kana kiri -->
+    <div class="hiasan-gangsa">
+      <img src="images/Bacground.png" alt="" class="gangsa1" width="210rem" />
+      <img src="images/Bacground.png" alt="" class="gangsa2" width="210rem" />
+    </div>
+
+    <!-- hiro start -->
+    <div class="hiro">
+      <div class="hiro-start2">
+        <img
+          src="images/Klentong No Bacgroundnew.png"
+          alt=""
+          class="gambarGong"
+        />
+        <img
+          src="images/Play.png"
+          alt="play"
+          class="play-btn"
+          onclick="playSound()"
+        />
+        <audio id="soundGong">
+          <source src="audio/Klentong.mp3" type="audio/mp3" />
+        </audio>
+        <script>
+          function playSound() {
+            let audio = document.getElementById("soundGong");
+            audio.currentTime = 0; // mulai dari awal
+            audio.play();
+          }
+        </script>
+      </div>
+      <div class="putarVideo">
+        <h1>p</h1>
+      </div>
+    </div>
+
+    <div class="play-icon" id="playBtn">
+      <img src="images/Button-play-video.png" alt="" width="300rem" />
+    </div>
+    <div class="video-box">
+      <video id="myVideo" style="display: none">
+        <source src="video/baleganjurtuatua.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <script>
+      let playBtn = document.getElementById("playBtn");
+      let video = document.getElementById("myVideo");
+
+      playBtn.addEventListener("click", function () {
+        // Tampilkan video
+        video.style.display = "block";
+
+        // Masuk ke fullscreen
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+          video.msRequestFullscreen();
+        }
+
+        // Putar video
+        video.play();
+
+        // Sembunyikan tombol play
+        playBtn.style.display = "none";
+      });
+
+      // Saat fullscreen ditutup
+      document.addEventListener("fullscreenchange", exitHandler);
+      document.addEventListener("webkitfullscreenchange", exitHandler); // Safari
+      document.addEventListener("msfullscreenchange", exitHandler); // IE/Edge
+
+      function exitHandler() {
+        if (
+          !document.fullscreenElement &&
+          !document.webkitFullscreenElement &&
+          !document.msFullscreenElement
+        ) {
+          // Hentikan dan sembunyikan video
+          video.pause();
+          video.currentTime = 0;
+          video.style.display = "none";
+
+          // Tampilkan tombol play lagi
+          playBtn.style.display = "block";
+        }
+      }
+
+      // Saat video selesai
+      video.addEventListener("ended", function () {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      });
+    </script>
+    <!-- hiro end -->
+
+    <audio
+      id="soundClick"
+      src="audio/SoundEffectNew2.mp3"
+      preload="auto"
+    ></audio>
+
+    <script>
+      function playClick(targetPage) {
+        const sound = document.getElementById("soundClick");
+        sound.currentTime = 0;
+        sound.play();
+
+        setTimeout(() => {
+          window.location.href = targetPage;
+        }, 250); // jeda 0.25 detik agar sound sempat terdengar
+      }
+    </script>
+
+    <!-- bulat hiasan -->
+    <div class="bulat-atas">
+      <img src="images/bulat atas.png" alt="" width="400rem" />
+    </div>
+    <div class="bulat-bawah">
+      <img src="images/bulat bawah.png" alt="" width="400rem" />
+    </div>
+  </body>
+</html>

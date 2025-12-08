@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenal Gamelan Baleganjur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Chettan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="memainkan.css" />
+  </head>
+  <body>
+    <!-- ornamen kana atas -->
+    <div class="ornamen-kanan-atas">
+      <img src="images/UkiranNew3.png" alt="" width="400rem" />
+    </div>
+
+    <!-- tombol keluar -->
+    <div class="back">
+      <a onclick="playClick(`main.html`)"
+        ><img src="images/Back.png" alt="" width="150rem"
+      /></a>
+      <h1>PONGGANG</h1>
+    </div>
+
+    <!-- hiasan gangsa kana kiri -->
+    <div class="hiasan-gangsa">
+      <img src="images/Bacground.png" alt="" class="gangsa1" width="210rem" />
+      <img src="images/Bacground.png" alt="" class="gangsa2" width="210rem" />
+    </div>
+
+    <!-- hiro start -->
+    <div class="hiro">
+      <img
+        src="images/Ponggang No Background - Salin.png"
+        alt="play"
+        class="play-btn"
+        onclick="playGong()"
+      />
+      <img
+        src="images/Ponggang No Background - Salin (2).png"
+        alt="play"
+        class="play-btn"
+        onclick="playPong()"
+      />
+      <audio id="soundGong">
+        <source src="audio/PonggangNung.mp3" type="audio/mp3" />
+      </audio>
+      <script>
+        function playGong() {
+          let audio = document.getElementById("soundGong");
+          audio.currentTime = 0; // mulai dari awal
+          audio.play();
+        }
+      </script>
+      <audio id="soundPong">
+        <source src="audio/PonggangNang.mp3" type="audio/mp3" />
+      </audio>
+      <script>
+        function playPong() {
+          let audio = document.getElementById("soundPong");
+          audio.currentTime = 0; // mulai dari awal
+          audio.play();
+        }
+      </script>
+    </div>
+    <!-- hiro end -->
+
+    <!-- opsi audio start -->
+    <div class="opsiaudio">
+      <a class="btn-audio" id="btn4">
+        <img src="images/Play.png" alt="play" id="icon4" />
+      </a>
+      <audio id="audio4" src="audio/PolaPonggang1.mp3"></audio>
+      <script>
+        const btn4 = document.getElementById("btn4");
+        const icon4 = document.getElementById("icon4");
+        const audio4 = document.getElementById("audio4");
+
+        btn4.addEventListener("click", () => {
+          if (audio4.paused) {
+            audio4.play();
+            icon4.src = "images/Pause1.png"; // ganti ke gambar pause
+          } else {
+            audio4.pause();
+            audio4.currentTime = 0; // reset ke awal (opsional)
+            icon4.src = "images/Play.png"; // ganti ke gambar play
+          }
+        });
+
+        // Kalau audio selesai, kembalikan ke ikon play
+        audio4.addEventListener("ended", () => {
+          icon4.src = "images/Play.png";
+        });
+      </script>
+      <a class="btn-audio" id="btn2">
+        <img src="images/Play.png" alt="play" id="icon2" />
+      </a>
+      <audio id="audio2" src="audio/PolaPonggang2.mp3"></audio>
+      <script>
+        const btn2 = document.getElementById("btn2");
+        const icon2 = document.getElementById("icon2");
+        const audio2 = document.getElementById("audio2");
+
+        btn2.addEventListener("click", () => {
+          if (audio2.paused) {
+            audio2.play();
+            icon2.src = "images/Pause1.png"; // ganti ke gambar pause
+          } else {
+            audio2.pause();
+            audio2.currentTime = 0; // reset ke awal (opsional)
+            icon2.src = "images/Play.png"; // ganti ke gambar play
+          }
+        });
+
+        // Kalau audio selesai, kembalikan ke ikon play
+        audio2.addEventListener("ended", () => {
+          icon2.src = "images/Play.png";
+        });
+      </script>
+      <a class="btn-audio" id="btn3">
+        <img src="images/Play.png" alt="play" id="icon3" />
+      </a>
+      <audio id="audio3" src="audio/PolaPonggang3.mp3"></audio>
+      <script>
+        const btn3 = document.getElementById("btn3");
+        const icon3 = document.getElementById("icon3");
+        const audio3 = document.getElementById("audio3");
+
+        btn3.addEventListener("click", () => {
+          if (audio3.paused) {
+            audio3.play();
+            icon3.src = "images/Pause1.png"; // ganti ke gambar pause
+          } else {
+            audio3.pause();
+            audio3.currentTime = 0; // reset ke awal (opsional)
+            icon3.src = "images/Play.png"; // ganti ke gambar play
+          }
+        });
+
+        // Kalau audio selesai, kembalikan ke ikon play
+        audio3.addEventListener("ended", () => {
+          icon3.src = "images/Play.png";
+        });
+      </script>
+      <a class="btn-audio" id="btn1">
+        <img src="images/Play.png" alt="play" id="icon1" />
+      </a>
+      <audio id="audio1" src="audio/PolaPonggang4.mp3"></audio>
+      <script>
+        const btn1 = document.getElementById("btn1");
+        const icon1 = document.getElementById("icon1");
+        const audio1 = document.getElementById("audio1");
+
+        btn1.addEventListener("click", () => {
+          if (audio1.paused) {
+            audio1.play();
+            icon1.src = "images/Pause1.png"; // ganti ke gambar pause
+          } else {
+            audio1.pause();
+            audio1.currentTime = 0; // reset ke awal (opsional)
+            icon1.src = "images/Play.png"; // ganti ke gambar play
+          }
+        });
+
+        // Kalau audio selesai, kembalikan ke ikon play
+        audio1.addEventListener("ended", () => {
+          icon1.src = "images/Play.png";
+        });
+      </script>
+    </div>
+    <!-- opsi audio end-->
+
+    <audio
+      id="soundClick"
+      src="audio/SoundEffectNew2.mp3"
+      preload="auto"
+    ></audio>
+
+    <script>
+      function playClick(targetPage) {
+        const sound = document.getElementById("soundClick");
+        sound.currentTime = 0;
+        sound.play();
+
+        setTimeout(() => {
+          window.location.href = targetPage;
+        }, 250); // jeda 0.25 detik agar sound sempat terdengar
+      }
+    </script>
+
+    <!-- bulat hiasan -->
+    <div class="bulat-atas">
+      <img src="images/bulat atas.png" alt="" width="400rem" />
+    </div>
+    <div class="bulat-bawah">
+      <img src="images/bulat bawah.png" alt="" width="400rem" />
+    </div>
+  </body>
+</html>

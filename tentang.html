@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenal Gamelan Baleganjur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Chettan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="kuis.css" />
+  </head>
+  <body>
+    <div id="transition-cloud" class="cloud-transition"></div>
+
+    <!-- ornamen kana atas -->
+    <div class="ornamen-kanan-atas">
+      <img src="images/UkiranNew3.png" alt="" width="400rem" />
+    </div>
+
+    <!-- tombol keluar -->
+    <div class="back">
+      <a onclick="playClick(`index.html`)"
+        ><img src="images/Back.png" alt="" width="150rem"
+      /></a>
+    </div>
+    <div class="Judul">
+      <h1>TENTANG KAMI</h1>
+    </div>
+
+    <!-- cover kuis -->
+    <div class="cover-tentang">
+      <h1>p<img src="images/Foto Jas.jpg" alt="" /></h1>
+    </div>
+    <div class="tentangKami">
+      <p class="Nama">I KADEK ALIT DWIPA ANGGARA</p>
+      <p class="Nama1">2201010191</p>
+      <p class="Nama2">TEKNIK INFORMATIKA - KOMPUTER AKUNTANSI BISNIS</p>
+      <div class="tentangLanjut">
+        <p>
+          <a
+            onclick="playClick(`https://www.instagram.com/alit_ajuzz?igsh=Nmd0aTNwcm80dW5j&utm_source=qr`)"
+            ><img src="images/Instagram-Logo1.png" alt="" /><span
+              >alit_ajuzz</span
+            ></a
+          >
+        </p>
+        <p>
+          <a
+            onclick="playClick(`https://www.facebook.com/share/17DskoyAaq/?mibextid=wwXIfr`)"
+            ><img
+              src="images/377-3776210_facebook-logo-vector-logovectornet-logo-facebook-2019-1png.png"
+              alt=""
+            />
+            <span> Alitdwipa </span>
+          </a>
+        </p>
+        <p>
+          <a onclick="playClick(`https://wa.me/6287814996383`)"
+            ><img src="images/WhatsApp-Symbol1.png" alt="" /><span
+              >+62 878-1499-6383
+            </span></a
+          >
+        </p>
+      </div>
+    </div>
+
+    <audio
+      id="soundClick"
+      src="audio/SoundEffectNew2.mp3"
+      preload="auto"
+    ></audio>
+
+    <script>
+      function playClick(targetPage) {
+        const sound = document.getElementById("soundClick");
+        sound.currentTime = 0;
+        sound.play();
+
+        setTimeout(() => {
+          window.location.href = targetPage;
+        }, 250); // jeda 0.25 detik agar sound sempat terdengar
+      }
+    </script>
+
+    <!-- hiasan gangsa kana kiri -->
+    <div class="hiasan-gangsa">
+      <img src="images/Bacground.png" alt="" class="gangsa1" width="210rem" />
+      <img src="images/Bacground.png" alt="" class="gangsa2" width="210rem" />
+    </div>
+    <div class="bulat-atas">
+      <img src="images/bulat atas.png" alt="" width="400rem" />
+    </div>
+    <div class="bulat-bawah">
+      <img src="images/bulat bawah.png" alt="" width="400rem" />
+    </div>
+  </body>
+</html>

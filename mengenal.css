@@ -1,0 +1,187 @@
+:root {
+  --primary: #ffd667;
+  --bg: #721818;
+  --bg2: #aa0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Baloo Chettan 2", sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+
+/* ornamen hiasan */
+
+.ornamen-kanan-atas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* hiasan gangsa kanan kiri */
+
+.hiasan-gangsa {
+  display: flex;
+  align-items: center;
+}
+
+.hiasan-gangsa .gangsa1 {
+  position: absolute;
+  left: 0;
+  top: 22rem;
+  transform: scaleX(-1);
+}
+
+.hiasan-gangsa .gangsa2 {
+  position: absolute;
+  right: 0;
+  top: 22rem;
+}
+
+/* bulat hiasan */
+
+.bulat-atas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bulat-bawah {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* navigasi start*/
+
+.back {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem 0 4%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+.back h1 {
+  font-weight: 800;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.back img:hover {
+  transform: scale(1.1);
+}
+
+/* hiro start */
+
+.hiro .putarVideo {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 800;
+  margin-top: -5%;
+}
+
+.hiro .hiro-start {
+  display: flex;
+  align-items: center;
+  margin: -14% 32% 2.5rem;
+}
+
+.hiro .hiro-start .gambarGong {
+  width: 26rem;
+}
+
+.hiro .hiro-start1 {
+  display: flex;
+  align-items: center;
+  margin: -4% 32% 4rem;
+}
+
+.hiro .hiro-start1 .gambarGong {
+  width: 27rem;
+}
+
+.hiro .hiro-start2 {
+  display: flex;
+  align-items: center;
+  margin: -11% 34% 0.5rem;
+}
+
+.hiro .hiro-start2 .gambarGong {
+  justify-content: center;
+  width: 25rem;
+}
+
+.hiro .hiro-start3 {
+  display: flex;
+  align-items: center;
+  margin: -6% 37% 3rem;
+}
+
+.hiro .hiro-start3 .gambarGong {
+  justify-content: center;
+  width: 20rem;
+}
+
+.hiro .hiro-start4 {
+  display: flex;
+  align-items: center;
+  margin: -6% 38% 3rem;
+}
+
+.hiro .hiro-start4 .gambarGong {
+  justify-content: center;
+  width: 20rem;
+}
+
+.play-btn {
+  width: 9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.play-btn:hover {
+  transform: scale(1.2);
+}
+
+.putarVideo {
+  color: var(--primary);
+  background-color: var(--primary);
+  margin: 2rem 20rem;
+  width: 40rem;
+  height: 14rem;
+  border-radius: 20rem;
+  box-shadow: 4px 4px 10px black;
+}
+
+.play-icon {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  margin: -15rem 30.5rem;
+  transition: transform 0.2s;
+}
+
+.play-icon:hover {
+  transform: scale(1.1);
+}
+/* hiro end */
