@@ -137,7 +137,6 @@ function showConfirm(text, imageSrc, yesCallback) {
   const box = document.getElementById("confirm-box");
   const img = document.getElementById("confirm-image");
   document.getElementById("confirm-text").innerText = text;
-  img.src = imageSrc;
   box.style.display = "block";
 
   document.getElementById("yes-btn").onclick = () => {
