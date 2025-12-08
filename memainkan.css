@@ -39,14 +39,14 @@ body {
 .hiasan-gangsa .gangsa1 {
   position: absolute;
   left: 0;
-  top: 22rem;
+  top: 50%;
   transform: scaleX(-1);
 }
 
 .hiasan-gangsa .gangsa2 {
   position: absolute;
   right: 0;
-  top: 22rem;
+  top: 50%;
 }
 
 /* bulat hiasan */
@@ -74,17 +74,17 @@ body {
 .back {
   display: flex;
   align-items: center;
-  padding: 1rem 5rem 0 4%;
+  font-size: 2.5vw;
+  font-weight: 700;
+  padding: 1.5vw 7vw 0 4%;
   cursor: pointer;
-  font-size: 2rem;
-  font-weight: 800;
   transition: all 0.3s;
 }
 
 .back h1 {
   font-weight: 800;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 1.3vw;
+  margin-bottom: 1.7vw;
 }
 
 .back img:hover {
@@ -99,8 +99,8 @@ body {
 }
 
 .hiro img {
-  height: 25rem;
-  margin: -10% 3% 3rem;
+  height: 32vw;
+  margin: -9% 3% 3%;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -118,8 +118,8 @@ body {
 }
 
 .hiro1 img {
-  height: 20rem;
-  margin: -3% 3% 3rem;
+  height: 25vw;
+  margin: -3% 2% 4%;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -131,8 +131,8 @@ body {
 }
 
 .hiro1 .play-btn1 {
-  height: 15rem;
-  margin: 1.2rem -3.5rem;
+  height: 20vw;
+  margin: 1% -4%;
 }
 
 /* hiro end */
@@ -142,11 +142,11 @@ body {
 .opsiaudio {
   display: flex;
   justify-content: center;
-  margin-top: -2rem;
+  margin-top: -2%;
 }
 
 .opsiaudio img {
-  width: 10rem;
+  width: 12vw;
   cursor: pointer;
   transition: all 0.3s;
 }
