@@ -80,7 +80,7 @@ const shuffledQuestions = questions
 
 function showQuestion() {
   const q = shuffledQuestions[currentQuestion];
-  document.getElementById("question-image").scr = q.image;
+  document.getElementById("question-image1").scr = q.image;
 
   const optionsContainer = document.querySelector(".options");
   optionsContainer.innerHTML = "";
