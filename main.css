@@ -158,3 +158,28 @@ body {
   width: 10vw;
 }
 /* navbar end */
+
+@media (min-width: 450px) {
+  .gangsa1 {
+    margin-top: 11%;
+  }
+  .gangsa2 {
+    margin-top: 11%;
+  }
+  .bulat-bawah {
+    top: 72%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gangsa1 {
+    margin-top: 1%;
+  }
+  .gangsa2 {
+    margin-top: 1%;
+  }
+  .bulat-bawah {
+    top: 46%;
+  }
+}
+
