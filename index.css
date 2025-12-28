@@ -144,3 +144,23 @@ body {
   background-repeat: no-repeat;
   z-index: -1;
 }
+
+@media (min-width: 450px) {
+  .ornamen-kiri-bawah {
+    top: 65%;
+  }
+  .bulat-bawah {
+    top: 72%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .ornamen-kiri-bawah {
+    top: 41.3%;
+  }
+  .bulat-bawah {
+    top: 46%;
+  }
+}
+
+
