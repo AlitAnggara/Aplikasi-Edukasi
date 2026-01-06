@@ -169,6 +169,25 @@ body {
   .bulat-bawah {
     top: 72%;
   }
+  .opsi {
+    display: block;
+    justify-items: center;
+    margin-top: 6%;
+  }
+  .opsipertama a {
+    width: 60vw;
+    height: 12vw;
+  }
+  .opsikedua a {
+    width: 60vw;
+    height: 12vw;
+  }
+  .opsipertama {
+    margin-right: 0%;
+  }
+  .opsikedua {
+    margin-top: 1%;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -182,4 +201,5 @@ body {
     top: 46%;
   }
 }
+
 
