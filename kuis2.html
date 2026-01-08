@@ -74,6 +74,16 @@
         }, 250); // jeda 0.25 detik agar sound sempat terdengar
       }
     </script>
+
+    <script>
+      const jawabanSalah = new Audio("audio/SuaraOpsi2.mp3");
+      const jawabanBenar = new Audio("audio/SuaraOpsi1.mp3");
+      const soalSelesai = new Audio("audio/SuaraOpsi3.mp3");
+
+      jawabanSalah.volume = 0.8;
+      jawabanBenar.volume = 0.8;
+      soalSelesai.volume = 0.8;
+    </script>
     <!-- hiasan gangsa kana kiri -->
     <div class="hiasan-gangsa">
       <img
@@ -97,3 +107,4 @@
     </div>
   </body>
 </html>
+
