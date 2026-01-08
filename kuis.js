@@ -101,8 +101,12 @@ function checkAnswer(selected) {
   const q = shuffledQuestions[currentQuestion];
   if (selected === q.answer) {
     score++;
+    jawabanBenar.currentTime = 0.2;
+    jawabanBenar.play();
     showPopup("✅", true);
   } else {
+    jawabanSalah.currentTime = 0.3;
+    jawabanSalah.play();
     showPopup("❌", false);
   }
 }
@@ -124,6 +128,8 @@ function nextQuestion() {
   if (currentQuestion < shuffledQuestions.length) {
     showQuestion();
   } else {
+    soalSelesai.currentTime = 0;
+    soalSelesai.play();
     endQuiz();
   }
 }
@@ -137,3 +143,4 @@ function endQuiz() {
 }
 
 window.onload = showQuestion;
+
