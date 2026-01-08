@@ -107,7 +107,7 @@ function checkAnswer(selected) {
   } else {
     jawabanSalah.currentTime = 0.3;
     jawabanSalah.play();
-    showPopup("❌", false);
+    showPopup("❎", false);
   }
 }
 
@@ -143,4 +143,5 @@ function endQuiz() {
 }
 
 window.onload = showQuestion;
+
 
