@@ -391,6 +391,14 @@ h2 {
   transition: transform 0.2s ease;
 }
 
+.pilihanKuis h1 {
+  display: block;
+  text-align: center;
+  font-size: 2.5vw;
+  margin-top: 7%;
+  margin-left: 15%;
+}
+
 .pilihanKuis a:hover {
   transform: scale(1.1);
 }
@@ -518,4 +526,5 @@ h2 {
     top: 46%;
   }
 }
+
 
