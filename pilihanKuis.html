@@ -13,8 +13,16 @@
     />
     <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="kuis.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body class="page-transition">
+    <div id="rotate-warning">
+      <img
+        src="images/PutarHp-removebg-preview.png"
+        alt=""
+        style="width: 10rem"
+      />
+    </div>
     <!-- ornamen kana atas -->
     <div class="ornamen-kanan-atas">
       <img src="images/UkiranNew3.png" alt="" style="width: 30vw" />
@@ -89,6 +97,21 @@
         }, 250); // jeda 0.25 detik agar sound sempat terdengar
       }
     </script>
+
+    <script>
+      function checkOrientation() {
+        if (window.innerHeight > window.innerWidth) {
+          document.getElementById("rotate-warning").style.display = "flex";
+        } else {
+          document.getElementById("rotate-warning").style.display = "none";
+        }
+      }
+
+      window.addEventListener("resize", checkOrientation);
+      window.addEventListener("load", checkOrientation);
+    </script>
+
   </body>
 </html>
+
 
