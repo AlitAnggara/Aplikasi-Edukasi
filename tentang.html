@@ -14,8 +14,16 @@
     />
     <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="kuis.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body class="page-transition">
+    <div id="rotate-warning">
+      <img
+        src="images/PutarHp-removebg-preview.png"
+        alt=""
+        style="width: 10rem"
+      />
+    </div>
     <div id="transition-cloud" class="cloud-transition"></div>
 
     <!-- ornamen kana atas -->
@@ -88,6 +96,20 @@
       }
     </script>
 
+    <script>
+      function checkOrientation() {
+        if (window.innerHeight > window.innerWidth) {
+          document.getElementById("rotate-warning").style.display = "flex";
+        } else {
+          document.getElementById("rotate-warning").style.display = "none";
+        }
+      }
+
+      window.addEventListener("resize", checkOrientation);
+      window.addEventListener("load", checkOrientation);
+    </script>
+
+
     <!-- hiasan gangsa kana kiri -->
     <div class="hiasan-gangsa">
       <img
@@ -111,3 +133,4 @@
     </div>
   </body>
 </html>
+
