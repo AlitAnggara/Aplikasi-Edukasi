@@ -14,8 +14,16 @@
     />
     <link rel="icon" href="images/icon-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="mengenal.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body class="page-transition">
+    <div id="rotate-warning">
+      <img
+        src="images/PutarHp-removebg-preview.png"
+        alt=""
+        style="width: 10rem"
+      />
+    </div>
     <!-- ornamen kana atas -->
     <div class="ornamen-kanan-atas">
       <img src="images/UkiranNew3.png" alt="" style="width: 30vw" />
@@ -160,6 +168,20 @@
       }
     </script>
 
+
+    <script>
+      function checkOrientation() {
+        if (window.innerHeight > window.innerWidth) {
+          document.getElementById("rotate-warning").style.display = "flex";
+        } else {
+          document.getElementById("rotate-warning").style.display = "none";
+        }
+      }
+
+      window.addEventListener("resize", checkOrientation);
+      window.addEventListener("load", checkOrientation);
+    </script>
+
     <!-- bulat hiasan -->
     <div class="bulat-atas">
       <img src="images/bulat atas.png" alt="" style="width: 30vw" />
@@ -169,4 +191,5 @@
     </div>
   </body>
 </html>
+
 
